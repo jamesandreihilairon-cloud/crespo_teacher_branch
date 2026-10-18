@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Management | CRESPORT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img class="school-logo" src="assets/school-logo.png" alt="CDLSHS school seal" onerror="this.remove()"><img class="mascot-logo" src="assets/cresport-mascot.png" alt="CRESPORT mascot"><div class="brand-text"><small>CDLSHS</small><img class="wordmark" src="assets/cresport-wordmark.png" alt="CRESPORT"></div></div>
+  <div class="top-actions"><button class="icon-btn" id="settingsBtn" type="button" title="Settings" aria-label="Settings"><img src="assets/settings-icon.png" alt=""></button><div class="notif-wrap"><button class="icon-btn bell-btn" id="bellBtn" type="button" title="Notifications" aria-label="Notifications" aria-haspopup="true" aria-expanded="false" aria-controls="notifPanel"><img src="assets/bell-icon.png" alt=""><span class="notif-badge hidden" id="notifBadge">0</span></button><div class="notif-panel hidden" id="notifPanel" role="region" aria-label="Notifications"><div class="notif-head"><b>Notifications</b><span id="notifSummary"></span></div><div class="notif-list" id="notifList"></div></div></div><button type="button" class="user" id="profileBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="profilePanel" title="Teacher profile"><span class="avatar" data-teacher-avatar></span><span class="user-meta"><b>Teacher Account</b><small id="userRole"></small></span><span class="user-caret">⌄</span></button></div>
+</header>
+<div class="page">
+  <nav class="tabs"><button class="tab active">Grade Management</button><button class="tab" id="planningTab">Class Planning &amp; Reminders</button></nav>
+  <section class="overview-grid">
+    <article class="panel progress-panel">
+      <div class="panel-heading"><div><h2>Grade Progress</h2></div><span class="pill">All assigned classes</span></div>
+      <div class="progress-content"><div class="donut-wrap"><div id="donut" class="donut"><div class="donut-center"><strong id="progressPct">0%</strong><span>Reviewed</span></div></div></div><div class="progress-details"><span class="term-label" id="termLabel">Grading period</span><div class="term-box" role="group" aria-labelledby="termLabel"><button type="button" class="term-btn active" data-term="Term 1" aria-pressed="true">Term 1</button><button type="button" class="term-btn" data-term="Term 2" aria-pressed="false">Term 2</button></div><select id="termSelect" hidden aria-hidden="true" tabindex="-1"><option value="Term 1">Term 1</option><option value="Term 2">Term 2</option></select><span id="progressTerm" class="sr-only">Term 1</span><p class="muted">Status across your assigned students for this term.</p><div id="progressLegend" class="legend"></div><div class="progress-foot"><span id="totalRecords">0 student records</span><span id="reviewedRecords">0 confirmed</span></div></div></div>
+    </article>
+    <article class="panel performance-panel">
+      <div class="panel-heading"><div><h2 id="performanceTitle">Class Performance</h2></div><div class="snapshot-toggle" role="group" aria-label="Class snapshot view"><button type="button" class="snapshot-tab active" data-snapshot="performance">Class Performance</button><button type="button" class="snapshot-tab" data-snapshot="alert">Performance Alert</button></div></div>
+      <div id="performanceView">
+        <div class="stats">
+          <div class="stat" tabindex="0" title="The highest recorded grade among students in this class for the selected term."><span>Highest grade ⓘ</span><strong id="highest">—</strong></div>
+          <div class="stat" tabindex="0" title="The average of all recorded student grades in this class for the selected term."><span>Average grade ⓘ</span><strong id="average">—</strong></div>
+          <div class="stat" tabindex="0" title="The lowest recorded grade among students in this class for the selected term. Consider checking whether the student needs additional academic support."><span>Lowest grade ⓘ</span><strong id="lowest">—</strong></div>
+        </div>
+        <div class="chart-title"><b>Grade distribution</b><span>Students by grade range</span></div><div id="distribution" class="distribution"></div>
+      </div>
+      <div id="alertView" class="hidden">
+        <div class="alert-tabs"><button class="alert-tab active" data-alert="lowest">Lowest Grade <span id="lowestCount">0</span></button><button class="alert-tab" data-alert="risk" title="At-risk grades are 76–79, close to the passing threshold of 75.">At Risk <span id="riskCount">0</span></button></div>
+        <p class="muted small" id="alertDescription">Students with recorded grades of 75 or below.</p><p class="notify-note" id="notifyNote">Only students in your assigned advisory class can be notified.</p><div id="alertList" class="alert-list"></div>
+        <div class="notify-row"><span id="notifySummary" class="muted small">Notifications are simulated in this demo.</span><button class="primary" id="notifyAll">Notify All</button></div>
+      </div>
+    </article>
+  </section>
+  <section class="panel manage-panel">
+    <div class="panel-heading"><div><h2>Grade Management</h2><p class="muted">Choose a class to view its records. The progress chart remains independent.</p></div><span class="pill" id="classCount">4 assigned classes</span></div>
+    <div class="inner-white"><div class="class-strip" id="classCards"></div></div>
+  </section>
+  <section class="panel table-panel">
+    <div class="panel-heading table-heading"><div><h2>Student Grade Table Record</h2></div><div class="table-actions"><button class="outline save-all hidden" id="saveAllBtn" type="button" title="Save every edited grade for this class and grading period">Save All Grades <span id="pendingBadge" class="count-badge hidden">0</span></button><button class="outline submit-adviser hidden" id="submitBtn" type="button" title="Send this class's grades for the selected grading period to the advisory teacher">Submit to Adviser</button><button class="outline" id="printBtn">⎙ Print</button></div></div>
+    <div class="toolbar"><select id="classSelect" aria-label="Select assigned class"></select><div class="searchbox"><span>⌕</span><input id="searchInput" placeholder="Search student name or LRN…" aria-label="Search by student name or LRN"></div><button class="outline" id="filterBtn">☷ Filters <span id="filterCount" class="count-badge">0</span></button><button class="outline" id="clearFilters">Clear filters</button><button class="outline layout-cycle" id="layoutCycle" type="button" aria-label="Switch grade table layout" title="Switch between horizontal and vertical subject grades">⇄ <span id="layoutCycleLabel">Layout</span></button></div>
+    <div id="filterPanel" class="filter-panel hidden">
+      <div><b>Student status</b><div class="filter-controls"><select id="studentStatusFilter" aria-label="Filter by student status"><option value="All Statuses">All Statuses</option><option value="Active">Active</option><option value="Deactivated">Deactivated</option><option value="Graduated">Graduated</option></select></div></div>
+      <div><b>Student classification</b><div class="check-row"><label><input type="checkbox" value="Regular" class="classFilter"> Regular</label><label><input type="checkbox" value="Irregular" class="classFilter"> Irregular</label></div></div>
+    </div>
+    
+    <div id="returnBanner" class="return-banner hidden" role="status"></div>
+    <div class="table-scroll"><table id="studentTable"><colgroup id="studentCols"></colgroup><thead id="studentTableHead"></thead><tbody id="studentRows"></tbody></table></div>
+    <div class="table-footer"><span id="rowCount">0 students</span><span id="pendingNote" class="pending-note"></span><span>Sample data · Changes are local to this demo</span></div>
+  </section>
+  <section class="panel submissions-panel">
+    <div class="panel-heading"><div><h2>Submitted Grade Review</h2><p class="muted" id="submissionsDesc">Review grades sent by subject teachers and track their status.</p></div><div class="review-controls"><div class="role-toggle" role="group" aria-label="Review perspective"><button type="button" class="role-tab active" data-role="advisory" aria-pressed="true">Advisory Review</button><button type="button" class="role-tab" data-role="subject" aria-pressed="false">Subject Review</button></div><span class="pill" id="submissionCount">0 submissions</span></div></div>
+    <div class="table-scroll"><table class="submissions-table"><colgroup id="subCols"></colgroup><thead id="subHead"></thead><tbody id="submissionRows"></tbody></table></div>
+  </section>
+  <footer>CRESPORT · CDLSHS Centralized Portal <span>Teacher Grade Management · Demonstration build</span></footer>
+</div>
+<div class="profile-backdrop" id="profileBackdrop"></div>
+<aside class="profile-panel" id="profilePanel" role="dialog" aria-modal="true" aria-labelledby="profileTitle" aria-hidden="true">
+  <div class="profile-head"><div><p class="eyebrow">CRESPORT</p><h2 id="profileTitle">Teacher Profile</h2></div><button type="button" class="icon-btn close-profile" id="profileClose" aria-label="Close profile">×</button></div>
+  <div class="profile-body">
+    <div class="profile-hero"><div class="avatar big" data-teacher-avatar role="img" aria-label="Profile picture"></div><b id="profileName">Teacher Account</b><span class="profile-role" id="profileRole"></span>
+      <div class="photo-tools">
+        <button type="button" class="outline" id="photoChoose">Upload Photo</button>
+        <input type="file" id="photoInput" accept="image/png,image/jpeg" hidden>
+        <div class="photo-preview hidden" id="photoPreviewBox"><img id="photoPreviewImg" alt="Preview of the new profile picture"><div class="photo-preview-side"><span>Preview · not saved yet</span><div class="photo-actions"><button type="button" class="primary" id="photoSave">Save Photo</button><button type="button" class="outline" id="photoCancel">Cancel</button></div></div></div>
+        <p class="photo-error hidden" id="photoError" role="alert"></p>
+        <p class="photo-hint">JPG or PNG, up to 2 MB.</p>
+      </div></div>
+    <dl class="profile-list" id="profileList"></dl>
+  </div>
+  <div class="profile-foot"><button type="button" class="outline" id="profileClose2">Close</button></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<dialog id="modal"><div class="modal-head"><div><p class="eyebrow">GRADE REVIEW</p><div class="modal-title-row"><h2 id="modalTitle">Review submission</h2><span id="modalStatus" class="status-pill" hidden></span></div></div><button class="icon-btn close-modal" aria-label="Close">×</button></div><div id="modalBody"></div><div id="modalActions" class="modal-actions"></div></dialog>
+<script src="app.js"></script>
+</body></html>

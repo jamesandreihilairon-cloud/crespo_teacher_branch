@@ -1,0 +1,501 @@
+:root{--navy:#2d3d70;--navy2:#354982;--blue:#879ff4;--blue2:#dce5ff;--orange:#f6b77e;--gray:#d8dadd;--ink:#17223b;--muted:#788195;--line:#dfe3eb;--surface:#fff;--bg:#f4f6fb;--green:#238568;--red:#b74747;--shadow:0 7px 20px rgba(35,48,88,.07)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}.topbar{height:70px;background:var(--navy);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,3vw,46px);gap:20px}.brand{display:flex;align-items:center;gap:11px}.crest{width:39px;height:39px;border:2px solid #f5c17f;border-radius:50%;display:grid;place-items:center;color:#f5c17f;font-size:24px}.brand small{display:block;font-size:10px;letter-spacing:2px;opacity:.9}.brand strong{font-size:20px;letter-spacing:2px;line-height:1.1}.brand strong span{color:#f3b477}.top-actions{display:flex;align-items:center;gap:12px}.icon-btn{border:0;background:#5068aa;color:white;border-radius:10px;width:40px;height:38px;font-size:21px;cursor:pointer}.user{border-left:1px solid #9ba8ce;margin-left:8px;padding-left:18px;display:flex;align-items:center;gap:10px}.user b,.user small{display:block}.user b{font-size:12px}.user small{font-size:11px;opacity:.8;margin-top:3px}.avatar{width:38px;height:38px;border-radius:50%;background:#e6e8ee;color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:17px}.page{max-width:1700px;margin:auto;padding:17px clamp(14px,2.4vw,36px) 28px}.tabs{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}.tab{border:0;border-radius:8px;padding:10px 18px;background:#e4e7ed;color:#35405c;font-weight:700;min-width:185px;cursor:pointer}.tab.active{background:#5067ad;color:white;box-shadow:0 3px 7px #c8cfe0}.term-control{margin-left:auto;display:flex;align-items:center;gap:9px;color:var(--muted);font-size:12px}.term-control select,select{border:1px solid var(--line);background:white;color:var(--ink);border-radius:8px;padding:10px 12px;font:inherit;max-width:100%}.overview-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:16px;align-items:stretch}.panel{background:var(--surface);border:1px solid #e3e7ef;border-radius:13px;box-shadow:var(--shadow);padding:20px;margin-bottom:16px;min-width:0}.panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:18px}.panel h2{font-size:20px;margin:0;color:var(--navy);letter-spacing:-.3px}.eyebrow{font-size:10px;letter-spacing:1.6px;color:#8b95a9;font-weight:800;margin:0 0 6px}.muted{color:var(--muted);font-size:12px;margin:6px 0 0;line-height:1.5}.small{font-size:11px}.pill{white-space:nowrap;border-radius:99px;background:#edf1ff;color:#4d629f;font-size:11px;font-weight:700;padding:7px 11px}.progress-content{display:flex;align-items:center;gap:clamp(18px,3vw,36px);min-height:205px}.donut-wrap{width:174px;flex:0 0 174px;display:grid;place-items:center}.donut{width:164px;height:164px;border-radius:50%;background:conic-gradient(var(--navy) 0 50%,var(--orange) 50% 75%,var(--gray) 75% 100%);display:grid;place-items:center;position:relative}.donut:after{content:"";position:absolute;inset:20px;border-radius:50%;background:white}.donut-center{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}.donut-center strong{font-size:28px;color:var(--navy)}.donut-center span{font-size:11px;color:var(--muted)}.progress-details{flex:1;min-width:0}.progress-details h3{margin:0;font-size:14px}.legend{display:grid;gap:11px;margin-top:18px}.legend-row{display:flex;align-items:center;gap:9px;font-size:12px}.legend-dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}.legend-row strong{margin-left:auto;font-size:12px}.progress-foot{border-top:1px solid var(--line);padding-top:12px;margin-top:15px;display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px}.text-link{border:0;background:none;color:#5368ad;font-weight:800;cursor:pointer;font-size:12px;white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:8px 0 18px;border-bottom:1px solid var(--line)}.stat{padding:8px 10px;border-radius:9px;cursor:help;outline-offset:3px}.stat span{display:block;color:var(--muted);font-size:11px;font-weight:700}.stat strong{display:block;color:var(--navy);font-size:29px;margin-top:8px}.chart-title{display:flex;align-items:center;justify-content:space-between;margin:17px 0 10px}.chart-title b{font-size:12px}.chart-title span{font-size:10px;color:var(--muted)}.distribution{display:grid;gap:8px}.dist-row{display:grid;grid-template-columns:54px 1fr 25px;gap:10px;align-items:center;font-size:10px;color:var(--muted)}.dist-track{height:12px;border-radius:99px;background:#f0f2f6;overflow:hidden}.dist-fill{height:100%;border-radius:99px;background:var(--navy2);min-width:0;transition:width .2s}.dist-count{text-align:right;font-weight:800;color:var(--ink)}.hidden{display:none!important}.alert-tabs{display:flex;border-bottom:1px solid var(--line);gap:8px}.alert-tab{border:0;background:#f1f3f8;padding:10px 13px;border-radius:8px 8px 0 0;color:#6c7590;font-weight:800;cursor:pointer;flex:1}.alert-tab.active{background:var(--navy);color:white}.alert-tab span{background:#fff3e8;color:#9b5e25;padding:2px 6px;border-radius:99px;margin-left:4px}.alert-list{max-height:185px;overflow:auto;margin-top:10px}.alert-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:10px 3px;border-bottom:1px solid var(--line)}.alert-item b{font-size:12px}.alert-item small{display:block;color:var(--muted);margin-top:4px;font-size:10px}.grade-chip{border-radius:7px;background:#fff0ef;color:var(--red);padding:6px 9px;font-weight:800}.grade-chip.risk{background:#fff2df;color:#a5641d}.notify-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}.primary,.outline{border-radius:8px;padding:10px 14px;font:inherit;font-weight:750;cursor:pointer;transition:.15s}.primary{background:var(--navy);color:white;border:1px solid var(--navy)}.primary:hover{background:#24325f}.outline{border:1px solid #d3d9e5;color:#3f4d78;background:white}.outline:hover{background:#f3f5fc}.manage-panel{padding-bottom:16px}.class-strip{display:grid;grid-template-columns:repeat(3,minmax(230px,1fr));gap:12px;max-height:275px;overflow:auto;padding:1px 3px 6px}.class-card{border:1px solid var(--line);border-radius:11px;padding:15px;min-width:0;position:relative;background:linear-gradient(135deg,#fff,#fafbff)}.class-card.selected{border:1.5px solid #687fc6;box-shadow:0 0 0 3px #e8edff}.class-card .subject{font-size:13px;font-weight:800;color:var(--navy);margin:0 0 8px}.class-meta{color:var(--muted);font-size:11px;line-height:1.7}.card-progress{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:11px;font-weight:750}.mini-track{height:5px;background:#e9edf5;border-radius:99px;margin-top:8px;overflow:hidden}.mini-track span{height:100%;display:block;background:var(--blue);border-radius:99px}.manage-btn{margin-top:13px;width:100%;background:#f0f3ff;border:1px solid #d9e0ff;border-radius:7px;padding:9px;color:#40568e;font-weight:800;cursor:pointer}.manage-btn:hover,.manage-btn.selected{background:var(--navy);color:white}.table-panel,.submissions-panel{padding:0;overflow:visible}.table-heading{padding:20px 20px 0}.table-actions{display:flex;gap:8px;flex-wrap:wrap}.toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:0 20px 16px}.searchbox{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 12px;flex:1;min-width:200px;max-width:390px}.searchbox span{font-size:22px;color:#7888b6}.searchbox input{border:0;outline:0;padding:11px 0;width:100%;font:inherit}.toolbar select{min-width:175px}.filter-panel{margin:0 20px 15px;padding:15px;background:#f7f8fc;border:1px solid var(--line);border-radius:9px;display:flex;gap:30px;flex-wrap:wrap}.filter-panel b{font-size:11px;color:var(--navy)}.check-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}.check-row label{font-size:11px;color:#566079;display:flex;align-items:center;gap:5px}.check-row input{accent-color:var(--navy)}.count-badge{background:#e8edff;border-radius:20px;padding:2px 6px;font-size:10px}.table-scroll{width:100%;overflow-x:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}thead{background:#f0f2f7;color:#5b6682}th{font-size:10px;text-transform:uppercase;letter-spacing:.55px;font-weight:800;text-align:left;padding:14px 17px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}td{padding:13px 17px;border-bottom:1px solid #edf0f5;font-size:11px}tbody tr:hover{background:#fafbff}.student-cell{display:flex;align-items:center;gap:9px}.student-avatar{width:29px;height:29px;display:grid;place-items:center;background:#e9edff;color:#465b9a;border-radius:8px;font-weight:800}.student-cell b{font-size:11px}.student-cell small{display:block;color:var(--muted);margin-top:3px;font-size:9px}.status-pill{display:inline-block;padding:5px 8px;border-radius:99px;font-size:10px;font-weight:800}.status-Active,.status-Confirmed{background:#e6f6ef;color:#237b5b}.status-Irregular,.status-ForReview,.status-SenttoAdviser{background:#fff0db;color:#9a641e}.status-TransferredOut,.status-Graduated,.status-Returned{background:#fce9e8;color:#a54a47}.status-Regular{background:#edf0f7;color:#64708a}.missing{color:#9299a8;font-style:italic}.table-footer{display:flex;justify-content:space-between;gap:12px;padding:12px 20px;color:var(--muted);font-size:10px}.submissions-panel .panel-heading{padding:20px 20px 0}.action-select{font:inherit;border:1px solid var(--line);border-radius:6px;padding:7px;color:#43537f;background:#fff;font-size:10px}.review-btn{border:0;border-radius:6px;background:#e8edff;color:#40558f;font-weight:800;padding:7px 10px;cursor:pointer;font-size:10px}footer{display:flex;justify-content:space-between;gap:12px;color:#8790a3;font-size:10px;padding:3px 4px 14px}.toast{position:fixed;bottom:22px;right:22px;background:#17223b;color:white;border-radius:10px;padding:13px 17px;box-shadow:var(--shadow);max-width:min(390px,calc(100vw - 35px));opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s;z-index:20}.toast.show{opacity:1;transform:translateY(0)}dialog{width:min(620px,calc(100vw - 28px));border:0;border-radius:15px;padding:22px;box-shadow:0 20px 70px #101a3b55;color:var(--ink)}dialog::backdrop{background:#101a3b80}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:18px}.modal-head h2{margin:0;color:var(--navy);font-size:20px}.close-modal{background:#eef1f8;color:var(--navy);font-size:25px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px;flex-wrap:wrap}.modal-content-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.detail-box{background:#f7f8fc;border:1px solid var(--line);border-radius:8px;padding:11px}.detail-box small{display:block;color:var(--muted);font-size:10px;margin-bottom:5px}.detail-box b{font-size:12px}.modal-table{margin-top:15px}.modal-table td,.modal-table th{padding:9px}.field{width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;margin-top:7px}.field-label{display:block;margin-top:14px;font-size:12px;font-weight:750}.risk-note{background:#fff5e8;border:1px solid #f5dfbf;border-radius:8px;padding:10px;color:#805722;font-size:11px;line-height:1.5}@media(max-width:1050px){.overview-grid{grid-template-columns:1fr}.class-strip{grid-template-columns:repeat(2,minmax(220px,1fr))}.progress-content{max-width:700px}.term-control{margin-left:0}}@media(max-width:650px){.topbar{padding:12px 15px;height:auto}.brand strong{font-size:16px}.top-actions{gap:6px}.top-actions>.icon-btn{display:none}.user{padding-left:9px;margin-left:0}.user>div:nth-child(2){display:none}.page{padding:12px 10px}.tabs{gap:7px}.tab{min-width:0;flex:1;padding:10px 8px;font-size:11px}.term-control{width:100%;justify-content:space-between}.term-control select{flex:1}.panel{padding:14px;border-radius:10px}.panel-heading{gap:8px}.panel h2{font-size:17px}.pill{font-size:9px;padding:6px 8px}.progress-content{flex-direction:column;align-items:flex-start}.donut-wrap{width:100%;flex:auto}.donut{width:145px;height:145px}.donut:after{inset:18px}.progress-details{width:100%}.stats{gap:2px}.stat{padding:6px 3px}.stat span{font-size:9px}.stat strong{font-size:23px}.class-strip{grid-template-columns:1fr;max-height:310px}.table-heading{padding:15px 14px 0}.toolbar{padding:0 14px 14px}.searchbox{max-width:none;flex-basis:100%}.toolbar select{flex:1;min-width:120px}.filter-panel{margin:0 14px 12px;gap:17px}.table-footer,footer{flex-direction:column}.submissions-panel .panel-heading{padding:15px 14px 0}.modal-content-grid{grid-template-columns:1fr 1fr}.notify-row{align-items:flex-start;flex-direction:column}}@media print{@page{size:landscape;margin:12mm}body{background:white;color:#111;font-size:10px}.topbar,.tabs,.overview-grid,.manage-panel,.submissions-panel,.toolbar,.table-actions,.filter-panel,footer,.toast{display:none!important}.page{padding:0;max-width:none}.table-panel{box-shadow:none;border:0;padding:0}.table-heading{padding:0 0 12px}.table-heading h2{color:#111}.table-heading .eyebrow{display:none}.table-scroll{overflow:visible}table{white-space:normal;min-width:0!important;width:100%}th,td{padding:7px 8px;font-size:9px;border:1px solid #ccc}.table-footer{padding:8px 0}.table-footer span:last-child{display:none}.print-meta{display:block!important;margin-bottom:10px;font-size:10px}.status-pill{border:1px solid #ccc;background:white!important;color:#111!important}}
+/* Updated grade table: compact student identity with a vertical subject-grade list. */
+.class-strip{grid-template-columns:repeat(4,minmax(210px,1fr))}
+.class-category{display:inline-block;background:#e9edff;color:#3e548f;border-radius:5px;padding:4px 7px;font-weight:800;font-size:10px}
+.subject-grade-list{min-width:230px;max-width:470px;border:1px solid #e5e9f2;border-radius:8px;overflow:hidden;background:#fff}
+.subject-grade-heading,.subject-grade-row{display:grid;grid-template-columns:minmax(0,1fr) 54px;gap:12px;align-items:center;padding:7px 10px}
+.subject-grade-heading{background:#f2f4fa;color:#6c7690;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+.subject-grade-row{border-top:1px solid #edf0f5;font-size:11px;white-space:normal}
+.subject-grade-row strong{text-align:right;color:var(--navy);font-size:12px}
+.subject-grade-row .missing{font-weight:500;font-size:10px}
+@media(max-width:1250px){.class-strip{grid-template-columns:repeat(2,minmax(210px,1fr))}}
+@media(max-width:650px){.class-strip{grid-template-columns:1fr}.subject-grade-list{min-width:220px}}
+/* Student grade table update: LRN under name, account status and academic remark separated. */
+.table-options{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px 14px;color:var(--muted);font-size:11px;font-weight:700}
+.segmented{display:inline-flex;border:1px solid #d7deef;border-radius:9px;padding:3px;background:#f3f5fb;gap:3px}
+.layout-btn{border:0;border-radius:6px;padding:8px 11px;background:transparent;color:#65708b;font:inherit;font-weight:800;cursor:pointer}
+.layout-btn.active{background:var(--navy);color:#fff;box-shadow:0 2px 5px #26345b2b}
+.student-cell{min-width:205px}
+.student-cell small{font-size:10px;letter-spacing:.1px}
+.grade-value{font-size:13px;font-weight:800;color:var(--navy)}
+.grade-edit{display:flex;align-items:center;gap:5px;min-width:112px}
+.grade-input{width:62px;min-width:0;padding:7px 5px;border:1px solid #d8deeb;border-radius:6px;font:inherit;font-weight:800;color:var(--navy);background:#fff}
+.grade-input:focus{outline:2px solid #b9c8ff;border-color:#879ff4}
+.save-grade{padding:7px 8px;border:0;border-radius:6px;background:#e8edff;color:#40558f;font-size:10px;font-weight:800;cursor:pointer}
+.save-grade:hover{background:var(--navy);color:white}
+.status-Deactivated{background:#fff0db;color:#9a641e}
+.status-Graduated{background:#fce9e8;color:#a54a47}
+.remark-passed{background:#e6f6ef;color:#237b5b}
+.remark-failed{background:#fce9e8;color:#a54a47}
+.remark-pending{background:#edf0f7;color:#64708a}
+.filter-controls{margin-top:10px}
+.filter-controls select{min-width:180px;padding:8px 10px;font-size:11px}
+.empty-table{text-align:center;padding:28px;color:#7c8598}
+@media(max-width:650px){.table-options{align-items:flex-start;flex-direction:column;padding:0 14px 14px}.segmented{width:100%}.layout-btn{flex:1;padding:8px 5px}}
+
+/* Refined snapshot toggle and switchable student-grade presentation. */
+.snapshot-toggle{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid #d7deef;border-radius:9px;background:#f3f5fb;flex-shrink:0}
+.snapshot-tab{border:0;border-radius:6px;padding:8px 11px;background:transparent;color:#65708b;font:inherit;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap}
+.snapshot-tab.active{background:var(--navy);color:#fff;box-shadow:0 2px 5px #26345b2b}
+.layout-cycle{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.vertical-subject-list{min-width:260px;max-width:540px;border:1px solid #e5e9f2;border-radius:8px;overflow:hidden;background:#fff}
+.vertical-grade-row,.vertical-edit-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(105px,auto);gap:12px;align-items:center;padding:8px 10px;border-top:1px solid #edf0f5;font-size:11px;white-space:normal}
+.vertical-grade-row:first-child,.vertical-edit-row:first-child{border-top:0}
+.vertical-grade-row strong{font-size:12px;text-align:right;color:var(--navy)}
+.vertical-subject{min-width:0;font-weight:600}
+.vertical-edit-row .grade-edit{justify-content:flex-end}
+/* Keep the page and its sections naturally scrollable on short and narrow screens. */
+html,body{min-height:100%;height:auto;overflow-x:hidden;overflow-y:auto}
+.page{min-height:calc(100vh - 70px);overflow:visible}
+.panel,.overview-grid,.table-panel,.submissions-panel{overflow:visible}
+.table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+@media(max-width:850px){.snapshot-toggle{flex-wrap:wrap}.snapshot-tab{padding:8px 9px}.layout-cycle{flex:1}}
+@media(max-width:650px){.snapshot-toggle{width:100%}.snapshot-tab{flex:1;white-space:normal}.vertical-subject-list{min-width:240px}.layout-cycle{flex:1}}
+
+/* ===================================================================
+   Teacher Portal refinement
+   =================================================================== */
+:root{--muted:#5d677d;--stripe:#edf1fa;--stripe-hover:#dfe7fb;--band:#f0f0f0;--btn-on-navy:#43548a;--btn-on-navy-hover:#53659f}
+
+/* --- 4. Navy outer stroke on every main card / information box --- */
+.panel{border:2px solid var(--navy)}
+dialog{border:2px solid var(--navy);overflow:hidden}
+
+/* --- Student Grade Table: one continuous, fixed-width column grid (widths come from the <colgroup>) --- */
+#studentTable{table-layout:fixed;width:100%;white-space:normal}
+#studentTable th,#studentTable td{vertical-align:middle}
+#studentTable .center{text-align:center}
+#studentTable th:first-child,#studentTable td:first-child{position:sticky;left:0;z-index:1;box-shadow:1px 0 0 #d3daea}
+#studentTable th:first-child{z-index:2}
+#studentTable td:first-child{background:inherit}
+#studentTable .student-cell{min-width:0}
+.grade-edit{justify-content:center;min-width:0}
+.grade-input{width:66px;font-size:14px;text-align:center}
+.vertical-subject-list{min-width:0;max-width:none;width:100%}
+
+/* --- 5. Tables: header band + zebra rows (applies to every table, incl. dialogs) --- */
+thead{background:var(--band)}
+th{background:var(--band);color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.6px;border-top:0;border-bottom:2px solid var(--navy)}
+td{font-size:12px;border-bottom:1px solid #dde3f0}
+tbody tr:nth-child(odd){background:#fff}
+tbody tr:nth-child(even){background:var(--stripe)}
+tbody tr:hover{background:var(--stripe-hover)}
+.alert-item{padding:10px 10px}
+.alert-item:nth-child(even){background:var(--stripe)}
+.alert-item:hover{background:var(--stripe-hover)}
+
+/* --- 3. Visual hierarchy: key figures large and bold, supporting text compact but readable --- */
+.stat span{color:var(--ink);font-size:12px;font-weight:800}
+.stat strong{font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-.5px;margin-top:6px}
+.donut-center strong{font-size:34px;font-weight:800;line-height:1.1}
+.donut-center span{font-size:12px;font-weight:700;color:var(--ink)}
+.progress-details h3{font-size:16px;color:var(--navy)}
+.legend-row{font-size:13px}
+.legend-row strong{font-size:16px;font-weight:800}
+.progress-foot{font-size:11px}
+#totalRecords,#reviewedRecords{font-weight:800;color:var(--navy);font-size:12px}
+.chart-title b{font-size:13px;color:var(--navy)}
+.dist-row{grid-template-columns:96px 1fr 32px;white-space:nowrap;font-size:11px;color:#46506a;font-weight:600}
+.dist-count{font-size:14px;font-weight:800;color:var(--navy)}
+.alert-item b{font-size:13px}
+.alert-item small{font-size:11px}
+.grade-chip{font-size:17px;font-weight:800;padding:6px 11px}
+.alert-tab{font-size:12px}
+.class-card .subject{font-size:14px}
+.class-meta{font-size:11px;color:#46506a}
+.card-progress{font-size:12px;font-weight:600}
+.card-progress b{font-size:18px;font-weight:800;color:var(--navy)}
+.card-progress .pct{font-size:16px;font-weight:800;color:var(--navy)}
+.grade-value{font-size:16px;font-weight:800}
+.student-cell b{font-size:13px;color:var(--ink)}
+.student-cell small{font-size:11px;color:var(--muted)}
+.missing{color:#6b7385;font-weight:600;font-size:11px}
+.avg-note{display:block;margin-top:3px;font-size:10px;color:var(--muted);font-weight:600}
+.grade-value.grade-low,.vertical-grade-row strong.grade-low{color:var(--red)}
+.status-pill{font-size:11px;min-width:88px;text-align:center;padding:6px 10px}
+.vertical-grade-row{font-size:12px}
+.vertical-grade-row strong{font-size:16px;font-weight:800}
+.vertical-subject{font-weight:700;color:#2c3552}
+.review-btn{font-size:11px;padding:8px 12px}
+.table-footer{font-size:11px;color:var(--muted)}
+footer{color:#66708a;font-size:11px}
+.pill{font-size:12px}
+
+/* --- Reference look: navy command band on the grade table --- */
+.table-panel .panel-heading{background:var(--navy);margin:0;padding:18px 20px 8px;border-radius:11px 11px 0 0;align-items:center}
+.table-panel .panel-heading h2{color:#fff}
+.table-panel .toolbar{background:var(--navy);margin:0;padding:8px 20px 18px}
+.table-panel .toolbar .outline,.table-panel .toolbar select,.table-heading .outline{background:var(--btn-on-navy);color:#fff;border:0;box-shadow:0 3px 7px rgba(0,0,0,.22);font-size:13px}
+.table-panel .toolbar .outline:hover,.table-heading .outline:hover{background:var(--btn-on-navy-hover)}
+.table-panel .toolbar option{color:var(--ink);background:#fff}
+.table-panel .searchbox{background:var(--btn-on-navy);border:0;box-shadow:0 3px 7px rgba(0,0,0,.22)}
+.table-panel .searchbox span{color:#fff}
+.table-panel .searchbox input{background:transparent;color:#fff}
+.table-panel .searchbox input::placeholder{color:#c7d0ee}
+.table-panel .toolbar .count-badge{background:var(--orange);color:var(--navy);font-weight:800}
+.toolbar #filterBtn{margin-left:auto}
+.filter-panel{margin-top:15px}
+
+/* --- Reference look: navy header band on Submitted Grade Review --- */
+.submissions-panel .panel-heading{background:var(--navy);margin:0;padding:16px 20px;border-radius:11px 11px 0 0;align-items:center}
+.submissions-panel h2{color:#fff}
+.submissions-panel .panel-heading .muted{color:#d3daf0}
+.submissions-panel .pill{background:transparent;color:#fff;font-size:15px;font-weight:800;padding:0}
+
+/* --- Review dialog: navy header + prominent Highest / Average / Lowest --- */
+.modal-head{background:var(--navy);margin:-22px -22px 18px;padding:16px 22px}
+.modal-head h2{color:#fff}
+.modal-head .eyebrow{color:#c7d0ee}
+.close-modal{background:transparent;color:#fff}
+.review-stats{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;margin:16px 0 6px}
+.review-stats span{display:block;font-weight:800;font-size:13px;color:var(--ink)}
+.review-stats strong{display:block;font-size:38px;font-weight:800;color:var(--navy);line-height:1.15}
+.detail-box small{color:var(--muted);font-size:11px}
+.detail-box b{font-size:13px}
+
+@media(max-width:650px){.stat strong{font-size:28px}.table-panel .panel-heading{padding:15px 14px 8px}.table-panel .toolbar{padding:8px 14px 14px}.submissions-panel .panel-heading{padding:14px}.toolbar #filterBtn{margin-left:0}.review-stats strong{font-size:30px}}
+
+/* --- Print: plain table, no sticky column, no fixed grid --- */
+@media print{
+ .table-panel .panel-heading{background:none;border-radius:0;padding:0 0 12px}
+ .table-panel .panel-heading h2{color:#111}
+ #studentTable th:first-child,#studentTable td:first-child{position:static;box-shadow:none}
+ tbody tr:nth-child(even){background:#f2f4f9!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ th{background:#eee!important}
+}
+
+/* ===================================================================
+   Round 2: Term Average distinction, Save All, submissions table, metrics, print
+   =================================================================== */
+
+/* --- Term Average: no column tint; only the number sits in a compact orange badge (same shape family as Passed / Failed) --- */
+#studentTable .avg-value{display:inline-block;min-width:64px;padding:6px 12px;border-radius:99px;background:var(--orange);color:var(--navy);font-size:13px;font-weight:800;line-height:1.2;text-align:center}
+
+/* --- Spacer between Status and the subject columns: zebra rows and borders stay continuous, so it reads as one table --- */
+#studentTable th.spacer,#studentTable td.spacer{padding:0}
+
+/* --- Horizontal layout: one-line subject headers, ellipsis when too long, full name in a floating tooltip --- */
+#studentTable th.subject-th{padding-left:10px;padding-right:10px}
+.subject-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:default;outline-offset:2px}
+.subject-tip{position:fixed;z-index:50;max-width:min(320px,calc(100vw - 16px));background:var(--ink);color:#fff;font-size:12px;font-weight:600;line-height:1.35;text-transform:none;letter-spacing:0;padding:7px 10px;border-radius:7px;box-shadow:0 6px 18px rgba(16,26,59,.3);pointer-events:none;opacity:0;visibility:hidden;transition:opacity .12s}
+.subject-tip.show{opacity:1;visibility:visible}
+
+/* --- Save All Grades (Subject Classes only) --- */
+.table-heading .save-all{background:var(--orange);color:var(--navy);font-weight:800;display:inline-flex;align-items:center;gap:7px}
+.table-heading .save-all:hover{background:#f9c595}
+.table-heading .save-all.has-pending{box-shadow:0 0 0 3px rgba(246,183,126,.5),0 3px 7px rgba(0,0,0,.22)}
+.table-heading .save-all .count-badge{background:var(--navy);color:#fff}
+.pending-note{color:#a5641d;font-weight:800}
+.grade-input.dirty{border-color:var(--orange);background:#fff7ec;box-shadow:0 0 0 2px rgba(246,183,126,.45)}
+.grade-input.invalid{border-color:var(--red);background:#fff1f0;box-shadow:0 0 0 2px rgba(183,71,71,.25)}
+.print-only{display:none}
+.print-meta{display:none}
+
+/* --- Submitted Grade Review: five data columns + action share the width evenly --- */
+.submissions-table{table-layout:fixed;width:100%;white-space:normal}
+.submissions-table td{vertical-align:middle}
+
+/* --- Class Performance: Highest / Average / Lowest centred in their sections --- */
+.stats{justify-items:stretch}
+.stat{text-align:center}
+.stat span,.stat strong{text-align:center}
+
+/* --- Print: centred report heading + student count, no interactive or search text --- */
+@media print{
+ @page{size:landscape;margin:12mm}
+ body{font-size:10px}
+ .panel{border:0!important;box-shadow:none!important;border-radius:0!important;padding:0;margin:0}
+ .table-panel .panel-heading{display:block!important;text-align:center;background:none!important;margin:0;padding:0 0 12px;border-radius:0}
+ .table-panel .panel-heading>div{text-align:center}
+ .table-panel .panel-heading h2{color:#111!important;font-size:20px;text-align:center;letter-spacing:0}
+ .print-meta{display:block!important;text-align:center;margin:6px auto 0;font-size:11px;line-height:1.65;color:#111}
+ .print-meta .pm-title{font-weight:800;font-size:12px}
+ .print-meta .pm-count{font-weight:800;font-size:13px;margin:3px 0}
+ .print-meta .pm-date{color:#444;font-size:10px}
+ .table-footer{display:none!important}
+ .screen-only,.save-all,.pending-note{display:none!important}
+ .print-only{display:inline!important}
+ #studentTable{width:100%;min-width:0!important;border-collapse:collapse}
+ #studentTable{table-layout:fixed!important;width:calc(100% - 2px)!important;margin:0 1px}
+ #studentTable th,#studentTable td{font-size:10.5px;padding:6px 5px;border:1px solid #b9bfcc;text-align:center;vertical-align:middle}
+ #studentTable th{font-size:9px;letter-spacing:0;padding:6px 4px}
+ #studentTable th:first-child,#studentTable td:first-child{padding-left:8px}
+ #studentTable .student-cell b{font-size:11px}
+ #studentTable .student-cell small{font-size:9px}
+ #studentTable th:first-child,#studentTable td:first-child{text-align:left}
+ #studentTable th{background:#e9ecf3!important;color:#111;border-bottom:2px solid #333}
+ #studentTable .grade-value,#studentTable .grade-print{font-size:12px;font-weight:800;color:#111}
+ /* Average prints at the same size/weight as subject grades, marked by an outline (a border, not a shadow, so it survives printing) */
+ #studentTable .avg-value{font-size:12px;font-weight:800;color:#111!important;background:transparent!important;border:1.5px solid #333;border-radius:6px;padding:2px 9px;min-width:0;line-height:1.2;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ #studentTable .avg-note{display:none}
+ /* the screen-only gap is dropped in print so no empty bordered column appears */
+ #studentTable th.spacer,#studentTable td.spacer,#studentCols col:nth-child(3){display:none!important}
+ .subject-tip{display:none!important}
+ /* paper has no hover, so printed headers wrap to show the full subject name */
+ .subject-name{white-space:normal;overflow:visible;text-overflow:clip}
+ .student-avatar{display:none}
+ .student-cell{gap:0}
+ .vertical-subject-list{border:0;border-radius:0;background:transparent!important;padding:0 6px}
+ .vertical-grade-row,.vertical-subject{text-align:left}
+ .vertical-grade-row strong{text-align:right}
+ .vertical-grade-row{padding:3px 4px;border-top:1px solid #ddd}
+ tr{break-inside:avoid;page-break-inside:avoid}
+ thead{display:table-header-group}
+ .status-pill{min-width:0;padding:2px 6px;font-size:9.5px;white-space:nowrap}
+}
+
+/* --- Review dialog: three detail boxes share the row; Grade and Remark columns centred --- */
+.modal-content-grid.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:650px){.modal-content-grid.three{grid-template-columns:1fr}}
+.modal-table th.center,.modal-table td.center{text-align:center}
+.modal-table .status-pill{min-width:84px}
+
+/* ===================================================================
+   UI fixes: compact Grade Progress card, Grading period beside Print, scrollable review popup
+   =================================================================== */
+
+/* --- 3. Popups: capped height, fixed header + footer, scrolling body, page behind is locked --- */
+html.modal-open,html.modal-open body{overflow:hidden}
+dialog{padding:0}
+dialog[open]{display:flex;flex-direction:column;max-height:min(88vh,820px);max-height:min(88dvh,820px)}
+dialog .modal-head{flex:0 0 auto;margin:0;padding:16px 22px}
+dialog #modalBody{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:18px 22px}
+dialog .modal-actions{flex:0 0 auto;margin:0;padding:14px 22px;background:#fff;border-top:1px solid var(--line)}
+dialog .modal-actions:empty{display:none}
+
+/* ===================================================================
+   Round 3: logos, Grade Progress enlarged, term box, notifications
+   =================================================================== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* --- Header: school seal, mascot, divider, CDLSHS + CRESPORT wordmark (images keep their own proportions) --- */
+.topbar{position:relative;z-index:60}
+.brand{gap:12px}
+.brand img{display:block;width:auto;max-width:none;object-fit:contain}
+.school-logo{height:50px}
+.mascot-logo{height:46px}
+.brand-text{border-left:2px solid var(--orange);padding-left:13px;display:flex;flex-direction:column;gap:3px}
+.brand-text small{font-size:15px;letter-spacing:2px;line-height:1;opacity:1;font-weight:500}
+.wordmark{height:30px}
+.top-actions{gap:14px}
+.top-actions .icon-btn{width:52px;height:46px;display:grid;place-items:center;padding:0;border-radius:10px;background:#5068aa;box-shadow:0 3px 7px rgba(0,0,0,.22);cursor:pointer}
+.top-actions .icon-btn:hover{background:#5d76bb}
+.top-actions .icon-btn img{height:30px;width:auto;display:block}
+.top-actions .icon-btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+/* --- Notification bell: red unread badge + dropdown --- */
+.notif-wrap{position:relative}
+.notif-badge{position:absolute;top:-7px;right:-7px;min-width:20px;height:20px;padding:0 5px;border-radius:99px;background:#e03131;color:#fff;font-size:11px;font-weight:800;line-height:20px;text-align:center;border:2px solid var(--navy);box-sizing:content-box;box-shadow:0 1px 3px rgba(0,0,0,.3);pointer-events:none}
+.notif-panel{position:absolute;top:calc(100% + 12px);right:-8px;width:min(400px,calc(100vw - 20px));background:#fff;color:var(--ink);border:2px solid var(--navy);border-radius:13px;box-shadow:0 18px 44px rgba(16,26,59,.35);overflow:hidden;z-index:70}
+.notif-head{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--navy);color:#fff;padding:13px 16px}
+.notif-head b{font-size:15px}
+.notif-head span{font-size:12px;font-weight:700;color:#d3daf0}
+.notif-list{max-height:min(420px,calc(100vh - 160px));overflow-y:auto;overscroll-behavior:contain}
+.notif-item{display:grid;grid-template-columns:14px minmax(0,1fr);gap:10px;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:#fff;padding:13px 16px;font:inherit;color:#4b5570;cursor:pointer}
+.notif-item:last-child{border-bottom:0}
+.notif-item:hover,.notif-item:focus-visible{background:var(--stripe-hover);outline:0}
+.notif-item.unread{background:#fff7ec;color:var(--ink)}
+.notif-item.unread:hover{background:#ffeed8}
+.notif-dot{width:10px;height:10px;border-radius:50%;margin-top:5px;border:2px solid #c3cadb;background:transparent}
+.notif-item.unread .notif-dot{background:var(--orange);border-color:var(--orange)}
+.notif-body{display:flex;flex-direction:column;gap:3px;min-width:0}
+.notif-body b{font-size:13px;color:var(--navy);font-weight:600}
+.notif-item.unread .notif-body b{font-weight:800}
+.notif-body span{font-size:12px;line-height:1.4}
+.notif-body small{font-size:11px;color:var(--muted);font-weight:700}
+.notif-empty{margin:0;padding:22px;text-align:center;color:var(--muted)}
+
+/* --- Grade Progress: larger chart + data that fill the card --- */
+.progress-panel{display:flex;flex-direction:column;padding:18px 24px 20px}
+.progress-panel .panel-heading{margin-bottom:12px}
+.progress-content{flex:1;min-height:0;align-items:center;gap:clamp(20px,3vw,40px)}
+.donut-wrap{width:236px;flex:0 0 236px}
+.donut{width:228px;height:228px}
+.donut:after{inset:28px}
+.donut-center strong{font-size:46px}
+.donut-center span{font-size:15px}
+.progress-details{display:flex;flex-direction:column;justify-content:center}
+.term-label{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;margin-bottom:7px}
+.term-box{display:flex;gap:4px;padding:4px;border:1px solid #d7deef;border-radius:11px;background:#f3f5fb}
+.term-btn{flex:1;border:0;border-radius:8px;padding:10px 6px;background:transparent;color:#65708b;font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.term-btn:hover{background:#e4e9f8;color:var(--navy)}
+.term-btn.active{background:var(--navy);color:#fff;box-shadow:0 2px 5px #26345b2b;border-bottom:3px solid var(--orange)}
+.term-btn:focus-visible{outline:2px solid var(--orange);outline-offset:1px}
+.progress-details .muted{font-size:13px;margin:10px 0 0}
+.legend{gap:12px;margin-top:14px}
+.legend-row{font-size:16px;gap:11px;font-weight:600}
+.legend-dot{width:15px;height:15px;border-radius:5px}
+.legend-row strong{font-size:26px;line-height:1}
+.legend-row strong span{font-size:14px}
+.progress-foot{font-size:13px;margin-top:14px;padding-top:12px}
+#totalRecords,#reviewedRecords{font-size:14px}
+
+/* --- Highlight of the record a notification opened --- */
+@keyframes focusRow{0%,70%{background:#ffe3bd}100%{background:transparent}}
+tr.focus-flash>td{animation:focusRow 3.2s ease-out}
+@keyframes focusPanel{0%,70%{box-shadow:0 0 0 5px var(--orange)}100%{box-shadow:var(--shadow)}}
+.focus-panel{animation:focusPanel 3.2s ease-out}
+@keyframes focusCol{0%,70%{background:var(--orange)}100%{background:var(--band)}}
+th.focus-col{animation:focusCol 3.2s ease-out}
+
+@media(max-width:1050px){.donut-wrap{width:220px;flex-basis:220px}.donut{width:212px;height:212px}}
+@media(max-width:650px){
+ .topbar{padding:10px 12px;gap:8px}
+ .brand{gap:7px;min-width:0}
+ .school-logo{height:34px}.mascot-logo{height:32px}
+ .brand-text{padding-left:8px;gap:2px}.brand-text small{font-size:10px;letter-spacing:1.4px}.wordmark{height:17px}
+ .top-actions{gap:7px}
+ .top-actions .icon-btn,.top-actions>.icon-btn{display:grid;width:40px;height:38px}
+ .top-actions .icon-btn img{height:22px}
+ .user{padding-left:8px;margin-left:0}
+ .notif-wrap{position:static}
+ .notif-panel{left:10px;right:10px;width:auto;top:calc(100% + 6px)}
+ .progress-panel{padding:14px}
+ .progress-content{flex-direction:column;align-items:center}
+ .donut-wrap{width:100%;flex:auto}
+ .donut{width:200px;height:200px}.donut:after{inset:25px}
+ .donut-center strong{font-size:40px}
+ .progress-details{width:100%}
+ .term-btn{font-size:14px}
+ .legend-row strong{font-size:22px}
+}
+.bell-btn{position:relative}
+
+/* ===================================================================
+   Round 4: profile side panel, header logos, Grade Management frame, simplified class cards
+   =================================================================== */
+/* --- Header: the profile control is now a button --- */
+button.user{background:none;border:0;border-left:1px solid #9ba8ce;color:inherit;font:inherit;text-align:left;cursor:pointer;border-radius:0}
+button.user:hover .avatar{box-shadow:0 0 0 3px rgba(246,183,126,.6)}
+button.user:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.user-meta{display:block}.user-meta b,.user-meta small{display:block}
+.user .avatar{display:grid}
+.school-logo{height:54px;width:54px}
+
+/* --- Profile side panel --- */
+html.panel-open,html.panel-open body{overflow:hidden}
+.profile-backdrop{position:fixed;inset:0;background:#101a3b80;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s .3s;z-index:90}
+.profile-backdrop.open{opacity:1;visibility:visible;transition:opacity .3s ease}
+.profile-panel{position:fixed;top:0;right:0;z-index:100;width:min(410px,100vw);height:100vh;height:100dvh;display:flex;flex-direction:column;background:#fff;border-left:2px solid var(--navy);box-shadow:-18px 0 44px rgba(16,26,59,.3);transform:translateX(100%);visibility:hidden;transition:transform .32s cubic-bezier(.22,.8,.3,1),visibility 0s .32s}
+.profile-panel.open{transform:none;visibility:visible;transition:transform .32s cubic-bezier(.22,.8,.3,1)}
+.profile-head{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--navy);color:#fff;padding:16px 20px}
+.profile-head h2{margin:0;color:#fff;font-size:20px}
+.profile-head .eyebrow{color:#c7d0ee;margin-bottom:4px}
+.profile-head .close-profile{background:#5068aa;color:#fff;font-size:26px;width:40px;height:38px;border:0;border-radius:10px;cursor:pointer;line-height:1}
+.profile-head .close-profile:hover{background:#5d76bb}
+.profile-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.profile-hero{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px 20px 18px;background:#f4f6fb;border-bottom:1px solid var(--line)}
+.profile-hero b{font-size:18px;color:var(--navy)}
+.avatar.big{width:96px;height:96px;font-size:42px;border:3px solid var(--navy);box-shadow:0 3px 8px rgba(35,48,88,.18)}
+.profile-list{margin:0;padding:0 20px}
+.profile-row{padding:14px 0;border-bottom:1px solid var(--line)}
+.profile-row:last-child{border-bottom:0}
+.profile-row dt{font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin:0 0 5px}
+.profile-row dd{margin:0;font-size:14px;font-weight:700;color:var(--ink);line-height:1.4}
+.not-provided{color:#6b7385;font-weight:600;font-style:italic}
+.profile-items{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.profile-items li{font-size:14px;font-weight:700}
+.profile-items li small{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-top:2px}
+.profile-foot{flex:0 0 auto;display:flex;justify-content:flex-end;padding:14px 20px;border-top:1px solid var(--line);background:#fff}
+@media(max-width:650px){.user-meta{display:none}.school-logo{height:34px;width:34px}.profile-panel{width:100vw}}
+@media print{.profile-panel,.profile-backdrop{display:none!important}}
+
+/* --- Grade Management: tinted outer card with a white inner rectangle for the class boxes --- */
+.manage-panel{background:#e9edf9;padding:20px 20px 20px}
+.manage-panel .panel-heading{margin-bottom:14px}
+.inner-white{background:#fff;border-radius:10px;padding:16px}
+.inner-white .class-strip{padding:1px 2px 4px;max-height:none;overflow:visible}
+
+/* --- Class boxes: identification appears once (top row); the pill keeps Advisory / Subject distinct --- */
+.class-card .subject{margin-bottom:10px}
+.class-meta{line-height:1}
+.card-progress{margin-top:16px}
+@media(max-width:650px){.manage-panel{padding:14px}.inner-white{padding:10px}}
+
+
+/* ===================================================================
+   Round 4: submission workflow (advisory + subject teacher views), white Grade Management card
+   =================================================================== */
+.status-ReturnedforCorrection{background:#fce9e8;color:#a54a47}
+.status-desc{display:block;margin-top:6px;font-size:11px;line-height:1.4;color:var(--muted);font-weight:600}
+.submissions-table{min-width:940px}
+.submissions-table th{white-space:normal}
+.submissions-table .status-pill{min-width:0;white-space:nowrap}
+.review-btn.revise{background:var(--orange);color:var(--navy);font-weight:800}
+.review-btn.revise:hover{background:#f9c595}
+
+/* Review perspective switch (sits in the navy band, same shape family as the Class Performance toggle) */
+.review-controls{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}
+.role-toggle{display:inline-flex;align-items:center;gap:3px;padding:3px;border-radius:9px;background:var(--btn-on-navy)}
+.role-tab{border:0;border-radius:6px;padding:8px 12px;background:transparent;color:#d3daf0;font:inherit;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap}
+.role-tab:hover{color:#fff}
+.role-tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 5px rgba(0,0,0,.2)}
+.role-tab:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+/* Popup: status box and review notes */
+.status-box .status-pill{margin-top:5px;min-width:0}
+.status-box .status-desc{margin:7px 0 0}
+.review-note{margin:4px 0 0;padding:10px 12px;border-radius:8px;background:#f6f7fb;border:1px solid var(--line);color:var(--ink);font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+
+/* Subject Class grade table: returned-for-correction banner + Submit to Adviser */
+.return-banner{padding:12px 20px;background:#fff7ec;border-bottom:1px solid #f0c496;border-left:4px solid var(--orange);color:var(--ink);font-size:12px;line-height:1.5}
+.return-banner b{color:var(--navy)}
+.return-note{display:inline-block;font-weight:700;color:#8a5116;overflow-wrap:anywhere}
+.grade-input.needs-entry{border:2px dashed var(--orange);background:#fffaf2}
+.table-heading .submit-adviser{font-weight:800}
+
+/* Grade Management (class progress tracker) card: white inner area like the other cards */
+.manage-panel{background:#fff}
+.inner-white{background:transparent;padding:0;border-radius:0}
+@media(max-width:650px){.inner-white{padding:0}}
+@media(max-width:650px){.review-controls{justify-content:flex-start}.role-toggle{width:100%}.role-tab{flex:1;white-space:normal}}
+@media print{.return-banner,.submit-adviser{display:none!important}}
+
+/* Popup: Subject / Teacher / Grading period share the first row, Status gets a full-width row */
+.modal-content-grid .status-box{grid-column:1/-1}
+.status-box .status-desc{display:inline;margin:0 0 0 10px;vertical-align:middle}
+
+
+/* ===================================================================
+   Round 5: teacher profile (avatar / photo upload / role), classification tag, hover-only status text
+   =================================================================== */
+.avatar{overflow:hidden;flex:0 0 auto;padding:0}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.avatar svg{width:100%;height:100%;display:block}
+.user small#userRole{font-size:11px;opacity:.9;white-space:nowrap}
+.profile-role{font-size:12px;font-weight:700;color:var(--muted);margin-top:-4px;text-align:center}
+.photo-tools{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;margin-top:4px}
+.photo-tools .outline{padding:8px 16px;font-size:13px}
+.photo-hint{margin:0;font-size:11px;color:var(--muted)}
+.photo-error{margin:0;padding:8px 10px;border-radius:8px;background:#fce9e8;color:#a54a47;font-size:12px;font-weight:700;text-align:center;width:100%}
+.photo-preview{display:flex;align-items:center;gap:14px;width:100%;padding:12px;background:#fff;border:1px solid var(--line);border-radius:10px}
+.photo-preview img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--navy);flex:0 0 auto}
+.photo-preview-side{display:flex;flex-direction:column;gap:8px;min-width:0}
+.photo-preview-side>span{font-size:11px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.4px}
+.photo-actions{display:flex;gap:8px;flex-wrap:wrap}
+.photo-actions button{padding:7px 12px;font-size:12px}
+.profile-row dd .status-pill{min-width:0}
+.class-tag{display:inline-block;margin-top:4px;padding:1px 8px;border-radius:99px;font-size:10px;font-weight:800;line-height:1.5}
+.class-Regular{background:#edf0f7;color:#64708a}
+.class-Irregular{background:#fff0db;color:#9a641e}
+.status-pill[title]{cursor:help}
+@media print{.class-tag{border:1px solid #ccc;background:#fff!important;color:#111!important}}
+
+/* Performance Alert: per-student Notify (advisory class only) */
+.alert-item.has-notify{grid-template-columns:minmax(0,1fr) auto auto}
+.notify-btn{min-width:82px;text-align:center;border:0;border-radius:7px;background:var(--blue);color:var(--navy);font:inherit;font-size:11px;font-weight:800;padding:7px 12px;cursor:pointer}
+.notify-btn:hover:not(:disabled){background:var(--navy);color:#fff}
+.notify-btn:disabled{background:#e6e8ee;color:var(--muted);cursor:default}
+#notifyAll:disabled{opacity:.5;cursor:not-allowed}
+
+/* Round 7: popup status badge beside the heading, Performance Alert note + LRN line */
+.modal-title-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.modal-title-row h2{margin:0}
+#modalStatus{margin:0;min-width:0;flex:0 0 auto}
+#modalStatus[hidden]{display:none}
+.notify-note{margin:2px 0 8px;padding:5px 9px;border-left:3px solid var(--orange);background:#fff7ec;color:var(--navy);font-size:11px;font-weight:700;line-height:1.35;border-radius:0 6px 6px 0}
+.alert-item .alert-meta{display:block;color:var(--muted);font-size:11px;font-weight:400;margin-top:1px;overflow-wrap:anywhere}
+
+/* Round 8: review history list + save-confirmation summary */
+.review-history{margin:6px 0 0;padding:10px 12px 10px 28px;border-radius:8px;background:#f6f7fb;border:1px solid var(--line);font-size:12px;line-height:1.5;color:var(--ink);overflow-wrap:anywhere}
+.review-history li+li{margin-top:3px}
